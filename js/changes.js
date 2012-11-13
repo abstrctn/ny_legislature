@@ -47,13 +47,16 @@ function load_committee(year, chamber, committee) {
         }
       }
 
-      draw_chart(
-        [
-          {party: "Democrats", count: parties["Democratic"]},
-          {party: "Republicans", count: parties["Republican"]},
-          {party: "Other", count: parties["Other"]}
-        ],
-        "#year-" + year);
+      var chart_data = [
+        {party: "Democrats", count: parties["Democratic"]},
+        {party: "Republicans", count: parties["Republican"]},
+      ];
+      if (parties["Other"] > 0) {
+        chart_data.push({party: "Other", count: parties["Other"]});
+      }
+
+      draw_chart(chart_data, "#year-" + year);
+
     } else {
       // No members of this committee were found
       container.html("No members were found for the " + year + " session.");
@@ -64,7 +67,6 @@ function load_committee(year, chamber, committee) {
 }
 
 (function() {
-
   // Start by loading the list of committees for each chamber.
   load_committee_list(2012, 'assembly');
   load_committee_list(2012, 'senate');
@@ -73,6 +75,7 @@ function load_committee(year, chamber, committee) {
   $('.committees a').live('click', function(ev) {
     $('.committees li').removeClass('active');
     $(ev.target).closest('li').addClass('active');
+    $('body').addClass('initialized');
 
     var chamber = $(ev.target).data('chamber');
     var committee = $(ev.target).data('committee');

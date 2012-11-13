@@ -15,6 +15,17 @@
   font-weight: 200;
   line-height: 25px;
 }
+.instructions {
+  padding: 15px 8px 8px 20px;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 25px;
+}
+.instructions .icon-chevron-left {
+  position: absolute;
+  left: 0;
+  top: 84px;
+}
 .topnav {
   padding: 0 0 0 16px;
 }
@@ -27,4 +38,10 @@
 }
 .year-container h5 {
   text-align: center;
+}
+.year-container h5 {
+  visibility: hidden;
+}
+.initialized .year-container h5 {
+  visibility: visible;
 }
