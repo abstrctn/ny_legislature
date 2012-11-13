@@ -1,0 +1,19 @@
+.year {
+  width: 200px;
+  height: 200px;
+}
+.loading {
+  background: url('../img/loading.gif') center center no-repeat;
+}
+.pull-quote {
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 25px;
+}
+.topnav {
+  padding: 0 0 0 16px;
+}
+.sidenav {
+  padding: 8px 0;
+}

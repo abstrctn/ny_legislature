@@ -3,12 +3,13 @@
   <head>
     <title>Changes in Power - NY State Legislature</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/changes.css" />
   </head>
 
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
-        <div class="container" style="padding: 0 0 0 16px;">
+        <div class="topnav container">
           <a class="brand" href="#">NY State Legislature</a>
           <ul class="nav">
             <li class="active">
@@ -24,23 +25,37 @@
     <div class="container">
       <div class="row-fluid">
         <div class="span3">
-          <div style="padding: 8px; font-size: 14px; font-weight: 200; line-height: 25px;">
+          <div class="pull-quote">
               Where are party lines drawn in the committees of the New York State Senate and Assembly?
           </div>
 
-          <div class="well" style="padding: 8px 0;">
-            <ul class="nav nav-list">
+          <div class="well sidenav">
+            <ul class="nav nav-list committees">
               <li class="nav-header">Senate</li>
               <li class="nav-header">Assembly</li>
+              <li><a data-chamber="assembly" data-committee="energy" href="#">Energy</a></li>
+              <li><a data-chamber="assembly" data-committee="aging" href="#">Aging</a></li>
             </ul>
           </div>
         </div>
-        <div class="span9">
+        <div class="span1"></div>
+        <div class="span4">
+          <h5>2009</h5>
+          <div class="year" id="year-2009"></div>
+        </div>
+        <div class="span4">
+          <h5>2011</h5>
+          <div class="year" id="year-2011"></div>
         </div>
       </div>
     </div>
 
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/api_key.js"></script>
+    <script src="js/endpoints.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/changes.js"></script>
   </body>
 </html>
