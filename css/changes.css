@@ -1,9 +1,13 @@
 .year {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
 }
-.loading {
+.year.loading {
   background: url('../img/loading.gif') center center no-repeat;
+}
+.sidenav .loading {
+  background: url('../img/loading.gif') center 20px no-repeat;
+  min-height: 70px;
 }
 .pull-quote {
   padding: 8px;
@@ -16,4 +20,11 @@
 }
 .sidenav {
   padding: 8px 0;
+}
+.year-container {
+  position: fixed;
+  top: 90px;
+}
+.year-container h5 {
+  text-align: center;
 }
